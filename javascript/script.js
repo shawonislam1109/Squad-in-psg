@@ -18,24 +18,27 @@ function manerAndcoach(element){
 }
 
 function displayPlayer(){
+    
     const inputPlayer = document.getElementById('input-player');
     inputPlayer.textContent = ' ';
+    
     let count = 0;
-        for(let i = 0; i<getPlayer.length; i++){
-            count++;
-            const name = getPlayer[i].playerName;
-            
-            if(  count <  6){
+    for(let i = 0; i<getPlayer.length; i++){
+        
+            if(  count <  5){
+                 count++;
+                   const name = getPlayer[i].playerName;
                     const h1 = document.createElement('h1');
                     h1.innerHTML = `
                     <h1 class="text-2xl font-bold">${count}. ${name}</h1>
                     `;
                     const player =  inputPlayer.appendChild(h1); 
                 }
-                else{
-                    alert('squad is Full so not Allow anyone'); 
+                else {
+                    alert('Squad is full anyone not allow');
                        
                 }
+
             }  
     return count; 
     
